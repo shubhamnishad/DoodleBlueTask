@@ -1,8 +1,8 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
-import MainNavigator from './MainNavigator/MainNavigator';
-import {persistor, store} from './Redux/store';
+import MainNavigator from './src/MainNavigator/MainNavigator';
+import {persistor, store} from './src/Redux/store';
 
 function App() {
   return (
