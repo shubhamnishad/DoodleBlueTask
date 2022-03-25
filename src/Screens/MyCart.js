@@ -4,9 +4,7 @@ import {
   View,
   StyleSheet,
   ScrollView,
-  Image,
   TouchableOpacity,
-  ImageBackground,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import {useSelector} from 'react-redux';

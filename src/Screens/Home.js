@@ -8,9 +8,8 @@ import {
   ImageBackground,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 import MenuCard from '../Components/MenuCard';
-import {TOTAL_AMOUNT} from '../Redux/action';
 
 const Home = props => {
   const {cartData, totalItems} = useSelector(state => state.cartReducer);
@@ -53,10 +52,12 @@ const Home = props => {
         <Text style={styles.restroTitle}>Inka Restaurant</Text>
         <View style={styles.restroDetail1}>
           <Text style={styles.fontDetail}>
+            <Icon name="star" size={15} style={{color: 'lightgrey'}} />{' '}
             5.0(200+) | All days :09:00 Am - 06:00 PM{' '}
           </Text>
         </View>
         <View style={styles.restroDetail2}>
+          <Icon name="phone" size={15} style={{color: 'lightgrey'}} />
           <Text style={styles.fontDetail}>Reach us at : 9854562142</Text>
         </View>
         <TouchableOpacity style={styles.bookTable}>
@@ -77,6 +78,7 @@ const Home = props => {
         })}
       </ScrollView>
       <TouchableOpacity style={styles.cartAction} onPress={() => viewCart()}>
+        <Icon name="shoppingcart" size={22} style={styles.uploadStyle} />
         <Text style={styles.cartActionText}>VIEW CART({totalItems} Items)</Text>
       </TouchableOpacity>
     </View>
@@ -123,6 +125,7 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   cartAction: {
+    flexDirection: 'row',
     backgroundColor: '#07003B',
     width: '100%',
     height: 55,
@@ -152,6 +155,7 @@ const styles = StyleSheet.create({
     color: 'grey',
     fontSize: 13,
     paddingBottom: 5,
+    paddingLeft: 7,
   },
   bookTable: {
     width: '50%',
