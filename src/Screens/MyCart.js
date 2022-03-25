@@ -32,6 +32,7 @@ const MyCart = props => {
         return (
           <View key={index}>
             <MenuCard item={item} index={item.id} />
+            <View style={styles.line}></View>
           </View>
         );
       });
@@ -44,6 +45,7 @@ const MyCart = props => {
         return (
           <View key={index}>
             <MenuCard item={item} index={item.id} />
+            <View style={styles.line}></View>
           </View>
         );
       });
@@ -117,7 +119,12 @@ const styles = StyleSheet.create({
     flex: 1,
     width: '100%',
   },
-
+  line: {
+    width: '90%',
+    alignSelf: 'center',
+    height: 2,
+    backgroundColor: 'lightgrey',
+  },
   introCard: {
     height: 180,
     width: '100%',
